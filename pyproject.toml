@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "media_storage"
+packages = [{ include = "src" }]
+version = "0.1.0"
+description = ""
+authors = ["Dmitry Maslennikov <maslennikov.da@phystech.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.121.1"
+ruff = "^0.14.4"
+mypy = "^1.18.2"
+dynaconf = "^3.2.12"
+uvicorn = "^0.29.0"
+sqlalchemy = "^2.0.44"
+alembic = "^1.17.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
