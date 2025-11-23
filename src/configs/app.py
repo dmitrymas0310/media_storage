@@ -9,7 +9,7 @@ class APPConfig(BaseModel):
     app_port: int
 
 
-class DBCongig(BaseModel):
+class DBConfig(BaseModel):
     db_name: str
     db_user: str
     db_password: str
@@ -28,7 +28,7 @@ class DBCongig(BaseModel):
 
 class Settings(BaseModel):
     app: APPConfig
-    db: DBCongig
+    db: DBConfig
 
 
 env_settings = Dynaconf(settings_file=["settings.toml"])
