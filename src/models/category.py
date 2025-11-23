@@ -3,6 +3,7 @@ import uuid
 from typing import Any
 from src.models.base import Base, BaseModelMixin
 from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
 
 
 from sqlalchemy import Column, String, Text
@@ -17,6 +18,8 @@ class Category(Base, BaseModelMixin):
     
     name = Column(String, nullable=False, unique=True)
     desc = Column(Text)
+
+    # posts = relationship("Posts", back_populates="category")
 
 
 

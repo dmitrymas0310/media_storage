@@ -20,7 +20,9 @@ class Post(Base, BaseModelMixin):
 
     category_id = Column(UUID(as_uuid=True), ForeignKey("category.uuid", ondelete="SET NULL"), nullable=True)
 
-    category = relationship("Category", back_populates="posts", lazy="select")
+    # category = relationship("Category", back_populates="posts")
+    # category = relationship("Category", backref="posts")
+    category = relationship("Category", lazy="joined")
 
     def __repr__(self) -> str:
         return f""
